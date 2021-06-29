@@ -25,6 +25,16 @@ header {
     padding: 10px;
 }
 
+.erro {
+    background-color: #EB5B50;
+    color: #FFF;
+    border: 1px solid #EB5B50;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
 .row {
     margin: 0;
 }
@@ -184,7 +194,6 @@ header {
 
 #image-container img {
     border-radius: 10px;
-    width: 70%;
 }
 
 #info-container h1 {
@@ -202,6 +211,10 @@ header {
 #description-container h3 {
     font-size: 20px;
     font-weight: bold;
+}
+
+#description-container {
+    margin-top: 30px;
 }
 
 #info-container ion-icon {

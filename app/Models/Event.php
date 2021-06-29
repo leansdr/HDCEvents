@@ -14,4 +14,9 @@ class Event extends Model
     ]; // Dizendo para a Model considerar items como array e não string
 
     protected $dates = ['date'];
+
+    public function user()
+    {
+        return $this->belongsTo('App/Models/User');
+    }
 }

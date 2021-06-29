@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Event; //importar a model Events para o controller EventsController
+use App\Models\User; //importar a model User para o controller EventsController
 
 class EventController extends Controller
 {
@@ -49,7 +50,12 @@ class EventController extends Controller
             $imageName    = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
             $requestImage->move(public_path('img/events'), $imageName);
             $event->image = $imageName;
+        } else {
+            return redirect('/events/create')->with('erro', 'É necessário preencher todos os campos');
         }
+
+        $user = auth()->user();
+        $event->user_id = $user->id;
 
         $event->save();
 
@@ -59,6 +65,14 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
-        return view('events.show', ['event' => $event]);
+        $eventOwner = User::where('id', $event->user_id)->first()->toArray();
+        return view('events.show', ['event' => $event], ['eventOwner' => $eventOwner]);
+    }
+
+    public function dashboard()
+    {
+        $user = auth()->user();
+        $events = $user->events;
+        return view('events.dashboard', ['events' => $events]);
     }
 }
