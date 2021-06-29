@@ -236,6 +236,26 @@ header {
     display: flex;
 }
 
+/*Dashboard*/
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-events-container form {
+    display: inline-block;
+}
+
+.dashboard-title-container th{
+    width: 25%;
+}
+
+/*Edit Page*/
+.img-preview {
+    width: 200px;
+    margin-top: 20px;
+}
+
 /*footer*/
 
 footer {
