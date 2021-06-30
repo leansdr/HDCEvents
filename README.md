@@ -3,4 +3,11 @@
 
 <p>Foi aplicado conceito de migrations, interação com banco relacional, rotas, requests, model, views e controller (MVC)</p>
 
-<p>Projeto foi desenvolvido através da playlist do curso de Laravel do canal Hora de Codar </p>
+<p>Projeto foi desenvolvido através da playlist do curso de Laravel do canal Hora de Codar.</p>
+
+<h2>Tecnologias utilizadas</h2>
+<ul>
+    <li><a href="https://jetstream.laravel.com/2.x/introduction.html">Laravel</a></li>
+    <li>Bootstrap</li>
+    <li></li>
+</ul>
