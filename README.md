@@ -11,5 +11,5 @@
     <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
     <li><a href="https://jetstream.laravel.com/2.x/introduction.html">Jetstream</a></li>
     <li><a href="https://ionic.io/">Ion-Icon</a></li>
-    <li><a href="https://laravel-livewire.com/">Ion-Icon</a></li>
+    <li><a href="https://laravel-livewire.com/">Livewire</a></li>
 </ul>
